@@ -1,0 +1,41 @@
+{
+  "version": "1.0.1",
+  "model_name": "IngreVision_V1",
+  "architecture": "ResNet50",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 11,
+  "classes": [
+    "apple",
+    "banana",
+    "bread",
+    "cucumber",
+    "grapefruit",
+    "lemon",
+    "lime",
+    "orange",
+    "pasta",
+    "rice",
+    "zucchini"
+  ],
+  "training_epochs": 125,
+  "last_updated": "2025-10-09T01:32:11.103707",
+  "description": "Enhanced model with 125 epochs training and comprehensive image augmentation",
+  "image_augmentations": [
+    "Random resized crops (224x224)",
+    "Random horizontal flips",
+    "Color jittering (brightness, contrast, saturation, hue)",
+    "Random rotations (\u00b110 degrees)",
+    "ImageNet normalization"
+  ],
+  "training_details": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "scheduler": "StepLR (step_size=10, gamma=0.1)",
+    "loss_function": "CrossEntropyLoss",
+    "batch_size": 16
+  }
+}
